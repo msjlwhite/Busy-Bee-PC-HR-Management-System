@@ -1,0 +1,203 @@
+/*
+Author: J White
+Date: 4/3/2019
+Task: Company Employee Maintance App -- Code Design
+
+*/
+
+Example:
+
+Simple Calculator application
+======================
+
+
+In this application you will create a **Calculator Class** with no fields
+and five methods.
+
+- void displayMenu() // Prompts the user to enter an operation type
+- void add() 		 // takes in two values and adds them together
+- void subtract() 	 // takes in two values and subtracts the second value from the first
+- void multiply() 	 // takes in two values and adds them together
+- void divide() 	 // takes in two values and divides the first value by the second
+
+upon starting the application prompt the user to enter in the operation
+each operation will take an input of two values (val1, val2). Extra credit if you can account for more than two values.
+
+==========================================
+
+Create a fake company
+-Give company 3 different Employees (manager, cashier, accountant)
+-Use Employee as an abstract class
+-All employees will have String name, int employeeId, double salary
+-Manager is full-time employee, cashier is part-time, accountant is contract
+-As a user, I want the ability to add, update, and delete employees to the fake company, calculate each employee's salary and income taxes.
+-Use your own discretion on each employees hourly rate which, along with income taxes, will determine their salary
+-Create a design based on these requirements (doesn't have to be super detailed), create a Trello ticket ("Employee Design - <your name>"), and post them there
+-Ask any questions you might have!
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Creating a Employee Maintance Application that will allow an user to add, delete and update existing employee information
+using classes and methods.
+
+Classes
+- public abstract class Employee{}
+- public class Manager extends Employee(String name, int employeeID, double salary)
+- public class Accountant extends Employee(String name, int employeeID, double salary)
+- public class Cashier extends Employee(String name, int employeeID, double salary)
+
+
+Getters and Setters (Abstract class only)
+
+
+
+Method
+public void begin()                     //
+public double weeklyPay()               //
+public void addUser()                   //
+public void updateUser()                //
+public void deleteUser()                //
+public void viewUser()                  //
+
+
+
+
+
+
+Will create an abstract class for Employee that will extend to the
+
+
+*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+
+// imports the java Scanner libraries
+
+// Class that hold the main parts (methods and variables) to help add, update, delete or review employee info
+
+calls the
+
+
+    // Instance variable declaration for the Pig Latin class
+
+    // method called by the Main class and Main Method to start the PiLgLatin App
+
+
+    // method that will take in user input then convert it into Pig Latin
+
+            // Asks user to enter in a word or phrase to convert
+
+            // takes in the user input (the word or phrase entered) then converts it to lowercase
+
+            // places the word or phrase into an array while taking out the spaces to make it easier to work with
+
+            //FOR loop to print out the individual word for the word or phrase entered
+
+                // Checks to see if the first character in each word is a VOWEL or not, if it is then it will add
+                // an "ay" to end of the word and print it back out
+
+                    // if the word DOES NOT begin with a VOWEL, it checks to see if the second character of the word
+                    // is a VOWEL or not. If it is then it will move the first letter/character to end of the word
+                    // then adds an "ay" to end of the word and print it back out
+
+                    // if the first and second letter/character of the word ARE NOT VOWELs, then it will move the first
+                    // and second letters/characters to end of the word then adds an "ay" to end of the word and print
+                    // it back out
+
+        // asks user if they would like to continue to enter in words or phrases for Pig Latin conversion
+
+        // takes in the user input (the word or phrase entered) then converts it to lowercase
+
+        // run divider for multiple runs
+
+        // uses the user's choice to continue to run the app or exits with a thank you message.
+
+        // App displays a thank you message to the user
+
+
+} // END PigLatin Class
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+main class --> calls begin class to start program
+
+programs starts and prompts user to enter in information for either a manager or cashier
+    once information is entered then call to Manager or Cashier class is made.
+
+    if manager is selected then user with be prompted to enter in the following information:
+        manager name ---> gets the user's input then sets the
+        manager id number
+        manager annual salary
+            salary then calls the calculateWeeklyPay method that will calculate the employee's weekly pay
+
+    if cashier is selected then user with be prompted to enter in the following information:
+        cashier name
+        cashier id number
+        cashier's hourly pay
+        number of hours worked weekly
+            salary then calls the calculateWeeklyPay method that will calculate the employee's weekly pay
+
+then all the employees information is displayed for the user to view
+
+User can then confirm if the information is correct or not
+    if it is not correct then the user will be asked to re-enter the employee's information
+
+once this process has been completed then the program will ask the user if the would like to continue adding
+employee information
+
+    if yes, then the program will restart
+    if no, then the program will exit
+
+
+
+
+
+
+next
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+calls the employee class
+
+abstract class employee
+    class Manager extends employee
+    class Cashier extends employee
+
+    getters
+    -------
+    getName(return name)
+    getEmployeeID(return employeeID)
+    getSalary(eturn salary)
+
+    Setters
+    --------
+    setName (String name) {this.name = name}
+    setEmployeeID (int employeeID) {this.employeeID = employeeID}
+    setSalary (int salary)
+
+
+public class Manager extends employee
+
+
+
+public class Cashier extends employee
+
+
+ */
+
+
+    // Create a Employee class -- Abstraction
+    // variable declaration
+//    public abstract class Employee {
+//
+//        private String name;            // hold employee's name
+//        private int employeeID;         // holds the employee's work ID
+//        private double salary;          // holds employee's salary
+//        // private paymentPerHour:      // ???
+//
+//    }// end of ABSTRACT CLASS for Employee
+
