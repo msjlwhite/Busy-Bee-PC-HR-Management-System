@@ -42,12 +42,11 @@ public class Manager extends Employee {
     double totalSal;                            // holds the result of the calculation, hourlySalary * hoursWorked
     Scanner scanner = new Scanner(System.in);   // holds the user's input and places it into the above variables
 
-    // variable initialization
+    // variable initialization - constructor
     public Manager() {
         super();                                // shows that the below variables with overwrite those from the abstract
                                                 // class...?
-        this.totalSal = totalSal;               // sets total salary to the calculation to hold the employee's weekly pay
-    }//
+    }//end of Constructor declaration
 
     // gets new manager information
     void managerInfo() {

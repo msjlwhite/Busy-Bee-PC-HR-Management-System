@@ -42,16 +42,12 @@ public class Cashier extends Employee
     int hoursWorked;                            // holds the number of hours a week that the employee has worked
     double totalSal;                            // holds the result of the calculation, hourlySalary * hoursWorked
     Scanner scanner = new Scanner(System.in);   // holds the user's input and places it into the above variables
-    String ans;
 
     // variable initialization - constructor
     public Cashier() {
         super();                                // shows that the below variables with overwrite those from the abstract
                                                 // class...?
-        this.hoursWorked = hoursWorked;         // sets work hours to the user's input
-        this.totalSal = totalSal;               // sets total salary to the calculation to hold the employee's weekly pay
-
-    }//
+    }//end of Constructor declaration
 
     // gets new cashier information
     void cashierInfo(){
@@ -78,7 +74,7 @@ public class Cashier extends Employee
 
     }//end of cashierInfo() Method
 
-    @Override // overrrides the method calculateWeeklyPay method in the abstract class with the following calculations
+    @Override // overrides the method calculateWeeklyPay method in the abstract class with the following calculations
     // and values
     public void calculateWeeklyPay() {
         super.calculateWeeklyPay();

@@ -107,7 +107,6 @@ public class Begin {
 
         // once N or " " is submitted by the user, the program will print out a thank you --
         // exit message to user
-//        System.out.println("Thank you! Goodbye!");
         System.out.println("Thank you for using the Busy Bee PC System! Goodbye " +
                 "and have an un-Bee-lievably sweet day!");
 
