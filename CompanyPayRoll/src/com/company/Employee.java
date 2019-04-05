@@ -11,6 +11,24 @@ Task: Company Payroll App -- Create a fake company
 -Create a design based on these requirements (doesn't have to be super detailed), create a Trello ticket ("Employee Design - <your name>"), and post them there
 -Ask any questions you might have!
 
+-----------------------------------------------------------------------------------------
+
+*Scanner flow should be something like this:*
+**If Cashier**
+Employee name:
+Employee Id:
+Employee Type:
+Hourly Rate:
+Hours Worked:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
+
+**If Manager**
+Employee name:
+Employee Id:
+Employee Type:
+Annual Salary:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
+
 */
 
 package com.company;

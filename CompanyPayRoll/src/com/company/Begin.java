@@ -89,7 +89,7 @@ public class Begin {
                 default:
                     // will print out a thank you / exit message to user if incorrect input is given
                     System.out.println("Thank you for using the Busy Bee PC System! Goodbye " +
-                            "and have an un-Bee-lieveably sweet day!");
+                            "and have an un-Bee-lievably sweet day!");
                     break;
 
             }// end of switch
@@ -102,7 +102,6 @@ public class Begin {
 
             while ((!ans.equals("n")) && (!ans.equals("")))
             {
-//                System.out.println("");
                 begin();
             }//end of while loop
 
@@ -110,7 +109,7 @@ public class Begin {
         // exit message to user
 //        System.out.println("Thank you! Goodbye!");
         System.out.println("Thank you for using the Busy Bee PC System! Goodbye " +
-                "and have an un-Bee-lieveably sweet day!");
+                "and have an un-Bee-lievably sweet day!");
 
     }// END of begin() method
 

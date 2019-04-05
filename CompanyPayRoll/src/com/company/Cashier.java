@@ -11,6 +11,23 @@ Task: Company Payroll App -- Create a fake company
 -Create a design based on these requirements (doesn't have to be super detailed), create a Trello ticket ("Employee Design - <your name>"), and post them there
 -Ask any questions you might have!
 
+-----------------------------------------------------------------------------------------
+
+*Scanner flow should be something like this:*
+**If Cashier**
+Employee name:
+Employee Id:
+Employee Type:
+Hourly Rate:
+Hours Worked:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
+
+**If Manager**
+Employee name:
+Employee Id:
+Employee Type:
+Annual Salary:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
 */
 
 package com.company;
@@ -27,12 +44,13 @@ public class Cashier extends Employee
     Scanner scanner = new Scanner(System.in);   // holds the user's input and places it into the above variables
     String ans;
 
-    // variable initialization
+    // variable initialization - constructor
     public Cashier() {
         super();                                // shows that the below variables with overwrite those from the abstract
                                                 // class...?
-        this.hoursWorked = hoursWorked;
-        this.totalSal = totalSal;
+        this.hoursWorked = hoursWorked;         // sets work hours to the user's input
+        this.totalSal = totalSal;               // sets total salary to the calculation to hold the employee's weekly pay
+
     }//
 
     // gets new cashier information
@@ -68,7 +86,7 @@ public class Cashier extends Employee
         displayCashierInfo();
     }
 
-    // displays employee's information to user     // and for verification -- ignore
+    // displays employee's information to user
     void displayCashierInfo(){
 
         System.out.println("");
