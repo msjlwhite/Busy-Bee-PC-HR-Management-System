@@ -1,16 +1,38 @@
 /*
 Author: J White
 Date: 4/3/2019 - 4/4/2019
-Task: Company Payroll App -- Create a fake company
--Give company 3 different Employees (manager, cashier, accountant)
+Task: Create a fake company
+-Give company 2 different Employees (manager, cashier)
 -Use Employee as an abstract class
--All employees will have String name, int employeeId, double salary
--Manager is full-time employee, cashier is part-time, accountant is contract
--As a user, I want the ability to add, update, and delete employees to the fake company, calculate each employee's salary and income taxes.
--Use your own discretion on each employees hourly rate which, along with income taxes, will determine their salary
+-Employees will share String name, int employeeId fields
+-Manager is a salaried employee, cashier is an hourly employee
+-As a user, I want the ability to calculate each employee's weekly pay
+
+*HINT:*
+-The user is asked to input the number of hours the cashier worked, then weekly pay is calculated.
+-The hours worked per week is irrelevant for a salaried employee, who is always paid the same amount.
+
+-Each class should have a constructor and a weeklyPay method. Only the abstract Employee class will have getters/setters
 -Create a design based on these requirements (doesn't have to be super detailed), create a Trello ticket ("Employee Design - <your name>"), and post them there
 -Ask any questions you might have!
 
+-----------------------------------------------------------------------------------------
+
+*Scanner flow should be something like this:*
+**If Cashier**
+Employee name:
+Employee Id:
+Employee Type:
+Hourly Rate:
+Hours Worked:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
+
+**If Manager**
+Employee name:
+Employee Id:
+Employee Type:
+Annual Salary:
+(Upon hitting enter, this should display employee's info *see attached screenshot)
 */
 
 package com.company;
@@ -30,7 +52,8 @@ public class Begin {
     public void begin()
     {
         // generates a welcome message to greet the user
-        System.out.println("Welcome to the Busy Bee Personnel Computing HR Management System!!");
+//        System.out.println("Welcome to the Busy Bee Personnel Computing HR Management System!!");
+        System.out.println("Welcome to the Busy Bee Personnel Computing System!!");
         System.out.println("");
 
         // creates and displays option to add a manager or a cashier to the system
@@ -42,8 +65,12 @@ public class Begin {
         System.out.println("C - Cashier");
         System.out.println("");
 
+        // User enters the type of employee they would like to add.
+        System.out.println("Please enter M or Manager for manager and C or Cashier for cashier.");
+        System.out.print("Whom would you like to add? Enter your choice: ");
 
-        System.out.print("Your choice: ");
+        // Takes in user input (choice) then will take them to the Manager question section, Cashier
+        // question section or exits the program
         opt = scanner.nextLine().toString().toLowerCase();
 
             switch (opt) {
@@ -58,21 +85,32 @@ public class Begin {
                     break;
                 case "cashier":
                     c.cashierInfo();
+                    break;
                 default:
-                    System.out.println("Thank you! Goodbye!");
+                    // will print out a thank you / exit message to user if incorrect input is given
+                    System.out.println("Thank you for using the Busy Bee PC System! Goodbye " +
+                            "and have an un-Bee-lieveably sweet day!");
                     break;
 
             }// end of switch
 
-        // will continue to run the program until the user enters an 'N' or 'n'
+        // will continue to run the program until the user enters an 'N' or 'n' or nothing
         System.out.print("");
-        System.out.print("Would you like to add another worker bee to the thriving hive? Y/N ");
+        System.out.print("Would you like to add another worker bee to our thriving hive? Y/N ");
             ans = scanner.nextLine().toString().toLowerCase();
+        System.out.println("");
 
-            while (!ans.equals("n"))
+            while ((!ans.equals("n")) && (!ans.equals("")))
             {
+//                System.out.println("");
                 begin();
             }//end of while loop
+
+        // once N or " " is submitted by the user, the program will print out a thank you --
+        // exit message to user
+//        System.out.println("Thank you! Goodbye!");
+        System.out.println("Thank you for using the Busy Bee PC System! Goodbye " +
+                "and have an un-Bee-lieveably sweet day!");
 
     }// END of begin() method
 

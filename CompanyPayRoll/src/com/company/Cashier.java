@@ -25,6 +25,7 @@ public class Cashier extends Employee
     int hoursWorked;                            // holds the number of hours a week that the employee has worked
     double totalSal;                            // holds the result of the calculation, hourlySalary * hoursWorked
     Scanner scanner = new Scanner(System.in);   // holds the user's input and places it into the above variables
+    String ans;
 
     // variable initialization
     public Cashier() {
@@ -67,8 +68,7 @@ public class Cashier extends Employee
         displayCashierInfo();
     }
 
-    // displays employee's information to user
-    // and for verification -- ignore
+    // displays employee's information to user     // and for verification -- ignore
     void displayCashierInfo(){
 
         System.out.println("");
@@ -88,7 +88,7 @@ public class Cashier extends Employee
         else
             System.out.println(getName() +" is a full-time employee.");
 
-//        correct();
+        System.out.println("");
 
     }//end of displayCashierInfo()
 

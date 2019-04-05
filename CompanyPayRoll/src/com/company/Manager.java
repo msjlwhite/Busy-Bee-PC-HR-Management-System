@@ -72,6 +72,8 @@ public class Manager extends Employee {
         System.out.println("Weekly Pay: $" + String.format("%.2f", totalSal));
         System.out.println(getName() + " is a full-time employee.");
 
+        System.out.println("");
+
     }//end of displayManagerInfo()
 
 }//end of Manager{} Class

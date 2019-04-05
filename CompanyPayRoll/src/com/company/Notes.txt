@@ -158,3 +158,16 @@ Annual Salary:
 //        } while !(ans.equals("n");
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        // will continue to run the program until the user enters an 'N' or 'n' or nothing
+        System.out.print("");
+        System.out.print("Does the above information look bee-lieveable? Y/N ");
+        ans = scanner.nextLine().toString().toLowerCase();
+        System.out.println("");
+
+        while ((!ans.equals("n")) && (!ans.equals("")))
+        {
+            System.out.println("");
+            cashierInfo();
+        }//end of while loop
+
