@@ -176,4 +176,6 @@ Annual Salary:
 //        this.hoursWorked = hoursWorked;         // sets work hours to the user's input
 //        this.totalSal = totalSal;               // sets total salary to the calculation to hold the employee's weekly pay
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+// double totalSal;                            // holds the result of the calculation, hourlySalary * hoursWorked

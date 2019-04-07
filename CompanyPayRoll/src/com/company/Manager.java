@@ -29,6 +29,10 @@ Employee Type:
 Annual Salary:
 (Upon hitting enter, this should display employee's info *see attached screenshot)
 
+------------------------------------------------------------------------------------------------------
+** WEEKLY PAY CALCULATION INCORRECT (as of 4/5/2019) - after further discussion with Stephen, Abbey
+* and Alpha. It was discovered that this initial calculation is incorrect. Updating original calculation.
+
 */
 
 package com.company;
@@ -39,7 +43,10 @@ import java.util.Scanner;
 public class Manager extends Employee {
 
     //variable declaration
-    double totalSal;                            // holds the result of the calculation, hourlySalary * hoursWorked
+    double weeksPay;                            // holds the result of the calculation, getSalary / 52 (number of weeks
+                                                // in a year)
+    double hoursPay;                            // holds the result of the calculation, (getSalary / 52 [number of weeks
+                                                // in a year]) / 40 [standard work week]
     Scanner scanner = new Scanner(System.in);   // holds the user's input and places it into the above variables
 
     // variable initialization - constructor
@@ -72,7 +79,9 @@ public class Manager extends Employee {
     // and values
     public void calculateWeeklyPay() {
         super.calculateWeeklyPay();
-        totalSal = getSalary() / 40; // total weekly salary calculation
+//        totalSal = getSalary() / 40; // total weekly salary calculation -- OLD CALCULATION*
+        weeksPay = getSalary() / 52; // total weekly salary calculation
+        hoursPay = (getSalary() / 52) / 40;
         displayManagerInfo();
     }
 
@@ -86,7 +95,8 @@ public class Manager extends Employee {
         System.out.println("Employee ID: " + getEmployeeID());
         System.out.println("Hours Worked: 40");
         System.out.println("Yearly Annual Pay: $" + String.format("%.2f", getSalary()));
-        System.out.println("Weekly Pay: $" + String.format("%.2f", totalSal));
+        System.out.println("Weekly Pay: $" + String.format("%.2f", weeksPay));
+        System.out.println("Hourly Pay: $" + String.format("%.2f", hoursPay));
         System.out.println(getName() + " is a full-time employee.");
 
         System.out.println("");
